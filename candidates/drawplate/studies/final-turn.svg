@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="660" viewBox="0 0 1440 660" role="img" aria-labelledby="title desc">
+  <title id="title">The last turn — a Higher Rank wire alignment study</title>
+  <desc id="desc">The same three wire shapes are projected twice. In the oblique view the blue upright sits well left of a copper kink and silver hook. Head-on, the upright, crossbar and hook align as an HR ligature. The wire shapes stay fixed.</desc>
+  <defs>
+    <g id="cobalt" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M -99,-73 V 73" stroke="#060b10" stroke-width="8.6"/><path d="M -99,-73 V 73" stroke="#487BFC" stroke-width="6.0"/><path transform="translate(-0.50,-0.55)" d="M -99,-73 V 73" stroke="#93b3ff" stroke-width="1.1"/></g>
+    <g id="copper" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M -99,0 H 31 Q 34,0 37,3 L 96,72" stroke="#060b10" stroke-width="8.6"/><path d="M -99,0 H 31 Q 34,0 37,3 L 96,72" stroke="#df8b58" stroke-width="6.0"/><path transform="translate(-0.50,-0.55)" d="M -99,0 H 31 Q 34,0 37,3 L 96,72" stroke="#efb28c" stroke-width="1.1"/></g>
+    <g id="silver" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M -10,73 V -63 Q -10,-73 0,-73 H 44 C 74,-73 88,-60 88,-39 C 88,-16 69,0 43,0 H 31" stroke="#060b10" stroke-width="8.6"/><path d="M -10,73 V -63 Q -10,-73 0,-73 H 44 C 74,-73 88,-60 88,-39 C 88,-16 69,0 43,0 H 31" stroke="#dce0dd" stroke-width="6.0"/><path transform="translate(-0.50,-0.55)" d="M -10,73 V -63 Q -10,-73 0,-73 H 44 C 74,-73 88,-60 88,-39 C 88,-16 69,0 43,0 H 31" stroke="#fff4e0" stroke-width="1.1"/></g>
+  </defs>
+  <rect width="1440" height="660" fill="#10151a"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="62" y="62" font-size="18" fill="#c1c9cc">Higher Rank</text>
+    <text x="1377" y="62" text-anchor="end" font-size="18" fill="#c1c9cc">Drawplate</text>
+    <path d="M 62,85 H 1378" stroke="#42494f"/>
+    <text x="58" y="160" fill="#f1ede4" font-family="Georgia, 'Liberation Serif', serif" font-size="68">The last turn</text>
+    <text x="1377" y="151" text-anchor="end" font-size="21" fill="#b1bcc0">One set of wires seen from two angles</text>
+  </g>
+  <g fill="none" stroke="#505b64" stroke-width="1">
+    <path d="M 72,236 V 220 H 88 M 647,220 H 663 V 236 M 72,476 V 492 H 88 M 647,492 H 663 V 476"/>
+    <path d="M 777,236 V 220 H 793 M 1352,220 H 1368 V 236 M 777,476 V 492 H 793 M 1352,492 H 1368 V 476"/>
+  </g>
+  <g id="oblique-projection">
+    <g data-plane="-120" transform="matrix(0.91118 -0.28214 0.00000 1.43604 233.04929 328.54790)"><use xlink:href="#cobalt"/></g>
+    <g data-plane="0" transform="matrix(0.91118 -0.28214 0.00000 1.43604 373.00000 355.00000)"><use xlink:href="#copper"/></g>
+    <g data-plane="120" transform="matrix(0.91118 -0.28214 0.00000 1.43604 512.95071 381.45210)"><use xlink:href="#silver"/></g>
+  </g>
+  <g id="front-projection">
+    <g data-plane="-120" transform="matrix(1.48000 -0.00000 0.00000 1.48000 1073.00000 355.00000)"><use xlink:href="#cobalt"/></g>
+    <g data-plane="0" transform="matrix(1.48000 -0.00000 0.00000 1.48000 1073.00000 355.00000)"><use xlink:href="#copper"/></g>
+    <g data-plane="120" transform="matrix(1.48000 -0.00000 0.00000 1.48000 1073.00000 355.00000)"><use xlink:href="#silver"/></g>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="72" y="553" fill="#eeeae2" font-size="27">Approach</text>
+    <text x="72" y="587" fill="#bdc7cb" font-size="20">The upright, crossbar and hook sit at different depths.</text>
+    <text x="777" y="553" fill="#eeeae2" font-size="27">Arrival</text>
+    <text x="777" y="587" fill="#bdc7cb" font-size="20">Their edges meet. A shared stem joins H to R.</text>
+  </g>
+</svg>
