@@ -7,6 +7,7 @@ Updated November 21, 2026.
 | Afterimage CP07 / typography and interaction edition 03 | ARCHIVED — NOT APPROVED FOR HIGHER RANK | Preserve for possible future reuse for another client. This owner decision supersedes earlier direction approval. |
 | Make Way | REJECTED | Do not revive by default. |
 | [Drawplate · CP09](https://github.com/Nicknac858/ASTRA---NEW-WEBSITE---Sandbox-/blob/f8414623079619558944acf3ce40502289513053/candidates/drawplate/README.md) | REVISION REQUESTED | Nick found the titanium and ceramic treatment too industrial. Retain this historical review. |
+| [Night Current · CP10](candidates/drawplate/README.md) | GATE 1 REVISION · AWAITING NICK | Neon cyan, hot fuchsia and citron current, visible traveling packets and contact sparks. The revision is ready for a creative decision. |
 | Living Nebula V2 in the separate legacy repository | Outside this sandbox | Preserve existing approval/source; no changes made here. |
 
 Passing tests and archiving files do not constitute creative approval. No production promotion is authorized by this archive.

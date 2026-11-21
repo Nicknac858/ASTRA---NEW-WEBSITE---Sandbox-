@@ -11,6 +11,10 @@ Nick wants an art-led encounter that makes someone curious enough to start a con
 - Target a 4K TV presentation and a separately composed phone portrait, including Galaxy S23 Ultra when available. Attach actual environment and performance evidence to implemented gates. Check paid items with Nick before buying or committing to them.
 - Work on the candidate branch in this GitHub sandbox. Keep approved legacy work, the Afterimage archive and the alternate exploration intact. Publication requires Nick’s explicit authorization.
 
+## Latest creative direction
+
+November 21, 2026. Nick found the initial treatment too industrial. Build the new studies around expressive neon wires, visible traveling energy, a pulse that lights a short stretch at a time and sparks that fly outward from a contact. The proposed cyan, fuchsia and citron palette is up for creative review.
+
 ## Decisions by gate
 
 | Gate | Review object | Advance when |

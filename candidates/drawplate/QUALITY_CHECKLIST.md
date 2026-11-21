@@ -1,25 +1,12 @@
-# Drawplate quality and evidence
+# Night Current quality and evidence
 
-## Gate 1 review
-
-| Check | Evidence or open question |
+| Check | Evidence |
 | --- | --- |
-| Reference access described accurately | Live site showed its unsupported page. The [review](README.md) identifies the archived motion samples and the founders’ account separately. Current live interaction and the ending remain unverified. |
-| Paused image has a recognizable silhouette | [Wide material keyframe](studies/conductor.png) shows the hooked shoulder, triangular opening, split ceramic/metal body and source of the wires. The near photographic plate could obscure the cables at some angles. |
-| Portrait has its own framing | [Middle-descent composition](studies/portrait.png). Physical phone legibility and safe-area behavior require a runnable scene. |
-| Ending has a geometric basis | [The last turn](studies/final-turn.svg) reuses the same paths at three depths. All three intended joins coincide in the frontal projection and are 142.4 drawing units apart in the oblique view. The SVG was rendered and visually checked. Perspective, arrival speed and recognition at phone size remain open. |
-| Architecture has seven reachable destinations | Seven mapped in the review, with four in the middle. Contact and the index are persistent. Sample copy identifies pending material. |
-| Owner decision | Gate 1 is ready for review. No design has Gate 1 approval until the decision is recorded. |
+| Easy to distinguish the three routes | The two new concept images depict cyan, hot fuchsia and citron filaments. The foreground cyan line deliberately carries the strongest pulse. |
+| Charge travels along a path | The [timing sketch](studies/night-current/pulse.gif) moves a short bright head and a longer tail along drawn routes. It includes an incoming wave, a fork, a delayed echo and a rest. |
+| Sparks originate at contact | Seven independently timed strokes fly from the side contact. The lower depth crossing stays quiet. |
+| Animation file works | Decoded all 90 frames of the 640 × 360 GIF. Its delays total 6.00 seconds. Seventy-five frames differ from rest. The final decoded composition matches the opening frame. |
+| Art direction and browser evidence distinguished | The photographic keyframes and timing sketch establish an appearance and rhythm. Testing the actual camera, depth buffer, browser frame time, 4K television output and Galaxy S23 Ultra is work for an approved runnable prototype. |
+| Reference and scope | Direct reference access limits and the historical walkthrough are recorded in [CP09](https://github.com/Nicknac858/ASTRA---NEW-WEBSITE---Sandbox-/blob/f8414623079619558944acf3ce40502289513053/candidates/drawplate/README.md). Preserve the spatial plan and content placeholders. |
 
-## Gate 2 acceptance and evidence to collect
-
-- Capture the jaw, both guides and cable origins under near-final lighting. Check silhouette and material separation with the pulse paused. A visible gap where a wire should meet a socket is a modeling fix.
-- Demonstrate one true near/far crossing, one traveling pulse and sparks produced by its contact event. Capture forward, immediate reverse and a fast jump. The depth order, source attachment and camera target must hold.
-- Open each of the prototype’s two media placements by pointer, touch where available, and keyboard. Check all close paths, exact return position, opener focus and a fresh deep link. Check text contrast (target 4.5:1 for normal text), zoom, reduced motion and a forced no-WebGL path.
-- Record browser and version, hardware, GPU and renderer, display/output mode, CSS viewport, device pixel ratio, actual drawing-buffer dimensions, quality setting and active videos. A 3840 × 2160 output with a lower-resolution render buffer must report both sizes.
-- Measure an ordinary pass and a fast scrubbing pass. Warm up, sample at least 30 seconds per pass, record median and 95th-percentile frame time and frames over 33.3 ms. Test sustained phone use separately to catch thermal changes. Photograph or record the physical television and Galaxy S23 Ultra when available. Label browser emulation and software renderers explicitly.
-- Provide a local preview command, pinned source and dependency lockfile, screenshots at the near and far crossings, and a short motion capture. Explicitly identify unavailable device tests. Ask Nick to approve, revise or stop.
-
-## Later gates
-
-At Gate 3, verify all seven opens and returns, the four-plate cluster, both final camera compositions and a clean reverse out of the HR view. At Gate 4, tie every public claim, metric and piece of media to supplied content, and verify the chosen contact route. At Gate 5, repeat input, accessibility, browser, media and device checks on the actual release candidate.
+For Gate 2, record a forward and reverse descent, a paused frame and at least one verified occlusion at each camera angle. Exercise keyboard, touch where available, position restoration, reduced motion and the illustrated fallback. Record actual browser, GPU, display mode, CSS viewport, device pixel ratio, drawing-buffer resolution, active video count, median and 95th-percentile frame times. Separate device results from emulation. Nick decides whether to advance.

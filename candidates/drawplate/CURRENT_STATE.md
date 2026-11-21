@@ -1,15 +1,15 @@
-# Resume Drawplate
+# Resume Night Current
 
-**CP09 · Gate 1 presented for review · November 21, 2026.**
+**CP10 · Revised Gate 1 artwork ready for Nick’s decision · November 21, 2026.**
 
-| Field | Current value |
+| Field | Value |
 | --- | --- |
-| Branch | `astra/drawplate` in `Nicknac858/ASTRA---NEW-WEBSITE---Sandbox-` |
-| Starting revision | Sandbox archive `12631eda8913051c258aa68744501d0046db6b73`. First candidate checkpoint `75d4fb8d94dd19f1567e291a0f9cfcadd8232448`. |
-| Gate 1 review source | [`f8414623079619558944acf3ce40502289513053`](https://github.com/Nicknac858/ASTRA---NEW-WEBSITE---Sandbox-/commit/f8414623079619558944acf3ce40502289513053) contains the complete review and all three studies. This handoff note pins that revision. Use `git rev-parse HEAD` on this branch to identify the revision including subsequent handoff notes. |
-| Preview | Open the [Gate 1 review](README.md) on GitHub. It embeds the two original PNGs and the SVG drawing. In a checkout, open the images directly in any image viewer or browser. There is no runtime or dependency install for this checkpoint. |
-| Evidence | Material keyframe 1672 × 941, portrait composition 941 × 1672, two-projection vector 1440 × 660. Static art only. Historical reference motion sampled. |
-| Unresolved | Creative approval, real-time material fidelity, moving wire/plate depth, perspective alignment, physical 4K output and S23 Ultra performance. Event details, real footage, growth evidence and a verified contact route are still pending. |
-| Exact next action | Read [the decision register](../../APPROVAL_REGISTER.md) and Nick’s latest message. On approval, record the decision and source revision, then model just the upper jaw, two guides and nearest two windows for the single descent described in the review. On revise, change the specified Gate 1 study. On stop, preserve CP09. |
+| Branch | `astra/drawplate` in `Nicknac858/ASTRA---NEW-WEBSITE---Sandbox-`. Night Current is the new working title for this conductor revision. |
+| Previous review | [CP09 · Drawplate](https://github.com/Nicknac858/ASTRA---NEW-WEBSITE---Sandbox-/blob/f8414623079619558944acf3ce40502289513053/candidates/drawplate/README.md). Nick requested a revision to the industrial material treatment. |
+| Starting checkpoint | `76b43935093a18bb591e94c9982068420d4e6db0` records the neon, pulse and flying-sparks request. |
+| Preview | [Gate 1 review](README.md), [six-second animation](studies/night-current/pulse.gif), [paused frame](studies/night-current/contact-frame.gif) and [final HR wire alignment](studies/night-current/last-turn.svg). |
+| Reproduce the motion sketch | Run `node render-sketch.cjs` from a local copy of the study folder. The deterministic renderer writes the GIFs with standard Node.js and no external dependencies. |
+| Open | Nick’s creative decision, real-time lighting and depth, device measurements, portfolio footage, tournament details, verified growth data and the contact destination. |
+| Next action | Check the [approval register](../../APPROVAL_REGISTER.md). On approval, start only the reversible Gate 2 camera move with a real filament contact and up to two windows. On revision, adjust the named part of this study. |
 
-Other project records live alongside this note: [brief](PROJECT_BRIEF.md), [design system](DESIGN_SYSTEM.md), [quality checklist](QUALITY_CHECKLIST.md) and [changes](CHANGELOG.md). The Afterimage archive and legacy directions have their own records.
+The full journey and final release retain their separate gates. The older material treatment is preserved in CP09.
