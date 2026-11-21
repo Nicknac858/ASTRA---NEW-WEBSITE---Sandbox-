@@ -1,0 +1,41 @@
+{
+  "source_revision": "fd489bc17184273615bc89cf42899eda4d2581b7",
+  "snapshot": "CP07 typography and interaction edition 03",
+  "archived_on": "2026-11-21",
+  "status": "NOT APPROVED FOR HIGHER RANK",
+  "purpose": "Preserved for possible reuse for another client",
+  "omitted": [
+    ".openai/hosting.json (existing Site identity; never deploy a reused client copy into this Site)",
+    "AGENTS.md and README.md (replaced with archival instructions)"
+  ],
+  "source_file_sha256": {
+    ".gitignore": "3a3bcf768c25d0483b1e4b81f5a2879def4f8160c994929ae3a997511dbd84ae",
+    "CHECKPOINT.md": "f2c41d8deb22bf889d5e415cb6976dd35a7c4b24bb7b12c942a6448c1671ce0a",
+    "build.mjs": "678aa0cdc48bee7f12a4510d3ba31626c24b2a4830cc264c197f52a5b36263e0",
+    "package-lock.json": "ec8864610a2f3a43feadf550384b9d7ddf235a877f1acdeb89a80346db8f07d3",
+    "package.json": "5aca37b4dec0f6c807d1ad25a2bf2029f4c329a68a80356cf33d38f097f0c2a0",
+    "public/assets/projection-atlas.png": "bce7a64e7fb8547ce06526b764a527d1d8304db2e03e5e531fd2e885d3c25234",
+    "public/index.html": "6e850279de21b974d703e2b82af9ab18a83e61e469caada786e2769e450af460",
+    "public/style.css": "4e540d9b8d385bf43c7a535dc209f204c626fb0475de90a41d817b536e1634bd",
+    "src/main.js": "ec9c624f38ec29795976cae83c07cc553a866de601fe50e2a5a51a46824ea523",
+    "src/motion.js": "86469280ebecabdb36707380f896ad1918855d8469b23f76f0b60b82930a9055",
+    "src/software.js": "869225cbf49cd5a43c375e028616abe0c5037ed70e12b60721d3d3115fcdfda5",
+    "src/world.js": "fde38c658d1414f678076fd1b704d6e1b675423b497ce76373fa4a790729f4b4"
+  },
+  "archive_file_sha256": {
+    ".gitignore": "3a3bcf768c25d0483b1e4b81f5a2879def4f8160c994929ae3a997511dbd84ae",
+    "CHECKPOINT.md": "5c08864eb0549466487aea471e8e559a8e1a458ce2246457bdd978a575b1dcc1",
+    "README.md": "e4499d2f8a46cbf22b9388a6450bec12a9fb884835079632860a0eed7c75302d",
+    "build.mjs": "678aa0cdc48bee7f12a4510d3ba31626c24b2a4830cc264c197f52a5b36263e0",
+    "package-lock.json": "ec8864610a2f3a43feadf550384b9d7ddf235a877f1acdeb89a80346db8f07d3",
+    "package.json": "5aca37b4dec0f6c807d1ad25a2bf2029f4c329a68a80356cf33d38f097f0c2a0",
+    "public/assets/projection-atlas.png": "bce7a64e7fb8547ce06526b764a527d1d8304db2e03e5e531fd2e885d3c25234",
+    "public/index.html": "6e850279de21b974d703e2b82af9ab18a83e61e469caada786e2769e450af460",
+    "public/style.css": "4e540d9b8d385bf43c7a535dc209f204c626fb0475de90a41d817b536e1634bd",
+    "src/main.js": "ec9c624f38ec29795976cae83c07cc553a866de601fe50e2a5a51a46824ea523",
+    "src/motion.js": "86469280ebecabdb36707380f896ad1918855d8469b23f76f0b60b82930a9055",
+    "src/software.js": "869225cbf49cd5a43c375e028616abe0c5037ed70e12b60721d3d3115fcdfda5",
+    "src/world.js": "fde38c658d1414f678076fd1b704d6e1b675423b497ce76373fa4a790729f4b4"
+  },
+  "documentation_note": "CHECKPOINT.md wraps the exact historical checkpoint in a superseding archive notice. Other copied files match the source hashes."
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0c0e0b">
+  <title>Afterimage — Higher Rank</title>
+  <meta name="description" content="An exploration of image, interaction and shared experience. Higher Rank — web design, events and digital media.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%230c0e0b'/%3E%3Cpath d='M12 9v22m16-22v22M12 20h16' stroke='%23e4e6d9' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="preload" href="/assets/projection-atlas.png" as="image">
+  <link rel="preload" href="/assets/fonts/hanken-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/bodoni-moda-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <a class="skip" href="#studio">Skip to the studio</a>
+  <div id="stage" aria-hidden="true">
+    <div id="fallback"><div class="still-pane still-hand"></div><div class="still-pane still-face"></div><div class="still-pane still-live"></div><i></i></div>
+    <canvas id="world"></canvas>
+    <div class="vignette"></div><div class="grain"></div>
+  </div>
+  <header>
+    <a class="wordmark" href="#arrival" aria-label="Higher Rank, return to the beginning"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 9V2h7M18 11v7h-7M5 15 15 5"/></svg><span>HIGHER RANK</span></a>
+    <nav aria-label="Main"><button id="index-open" aria-haspopup="dialog"><span class="nav-label">Index</span> <span class="nav-mark" aria-hidden="true">+</span></button><button id="contact-open" aria-haspopup="dialog"><span class="nav-label">Contact</span></button></nav>
+  </header>
+  <div class="edge edge-left" aria-hidden="true"></div><div class="edge edge-right" aria-hidden="true"></div>
+  <main id="journey" aria-label="Afterimage, a scroll exploration">
+    <section id="arrival" class="scroll-anchor"><h1 class="sr-only">Afterimage — a Higher Rank digital exhibition</h1><p class="sr-only">Scroll through image, interaction and shared experience, or use the index to go directly to the studio.</p></section>
+    <section id="response" class="scroll-anchor"><h2 class="sr-only">The image responds — web design and experiments</h2></section>
+    <section id="gathering" class="scroll-anchor"><h2 class="sr-only">The image becomes a place — events and live experiences</h2></section>
+    <section id="studio" class="scroll-anchor"><h2 class="sr-only">Higher Rank — web design, events and digital media</h2></section>
+  </main>
+  <div id="scene-copy" aria-hidden="true"><span id="scene-kicker">A study in presence</span><span id="scene-sub">An image is only the beginning.</span></div>
+  <div id="studio-content" inert>
+    <span class="eyebrow"><i></i> THE STUDIO BEHIND THE IMAGE</span>
+    <h2>Higher <em>Rank</em></h2>
+    <p class="studio-intro">Ideas that move between<br>the screen and the room.</p>
+    <div class="disciplines">
+      <button data-discipline="web" aria-controls="detail-web" aria-expanded="false"><span class="discipline-label">Web design</span><span class="discipline-icon" aria-hidden="true"><svg class="diagonal" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M4 3h9v9"/></svg></span></button>
+      <div id="detail-web" class="discipline-detail" hidden>Distinctive websites and interactive experiences, designed around how people explore.</div>
+      <button data-discipline="live" aria-controls="detail-live" aria-expanded="false"><span class="discipline-label">Events</span><span class="discipline-icon" aria-hidden="true"><svg class="diagonal" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M4 3h9v9"/></svg></span></button>
+      <div id="detail-live" class="discipline-detail" hidden>Live experiences that bring people, ideas and brands into the same space.</div>
+      <button data-discipline="media" aria-controls="detail-media" aria-expanded="false"><span class="discipline-label">Digital media</span><span class="discipline-icon" aria-hidden="true"><svg class="diagonal" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M4 3h9v9"/></svg></span></button>
+      <div id="detail-media" class="discipline-detail" hidden>Images, stories and digital content with a clear point of view.</div>
+    </div>
+    <button class="conversation" id="studio-contact"><span class="conversation-label">Start a conversation</span><span class="conversation-icon" aria-hidden="true"><svg class="diagonal" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M4 3h9v9"/></svg></span></button>
+    <p class="study-note">AFTERIMAGE / AN INDEPENDENT CONCEPT STUDY</p>
+  </div>
+  <footer class="hud">
+    <div class="hud-row"><button id="next-scene" aria-label="Explore the next scene"><span id="scroll-text">Scroll to explore</span><span class="arrow">↓</span></button><div class="scene-meta"><span id="chapter-number">01</span><span class="slash">/</span><span id="chapter-name">AFTERIMAGE</span></div></div>
+    <div class="timeline" aria-label="Scene navigation"><div class="track" aria-hidden="true"><span id="progress"></span></div><button data-scene="0" aria-label="Enter the image" aria-current="step"><span>01</span></button><button data-scene="1" aria-label="The image responds"><span>02</span></button><button data-scene="2" aria-label="The image becomes a place"><span>03</span></button><button data-scene="3" aria-label="Discover the studio"><span>04</span></button></div>
+    <div class="footer-note"><span id="edition">EXPERIMENT 01 / AFTERIMAGE</span><button id="motion-toggle" aria-pressed="false"><span class="motion-icon" aria-hidden="true">II</span><span id="motion-label">Pause motion</span></button></div>
+  </footer>
+  <dialog id="index-dialog" aria-labelledby="index-title">
+    <div class="dialog-top"><span class="wordmark">HIGHER RANK</span><button class="close-dialog" aria-label="Close index">Close ×</button></div>
+    <div class="index-inner"><span class="eyebrow" id="index-title">FIND YOUR OWN WAY</span><ol class="index-list"><li><a href="#arrival"><span class="index-number">01</span><span class="index-label">The image</span><small>Afterimage</small></a></li><li><a href="#response"><span class="index-number">02</span><span class="index-label">The response</span><small>Web / Experiments</small></a></li><li><a href="#gathering"><span class="index-number">03</span><span class="index-label">The gathering</span><small>Live / Events</small></a></li><li><a href="#studio"><span class="index-number">04</span><span class="index-label">The studio</span><small>Higher Rank</small></a></li></ol><p>Web design. Events. Digital media.<br><span>Discover the work through the experience.</span></p></div>
+  </dialog>
+  <dialog id="contact-dialog" aria-labelledby="contact-title">
+    <div class="dialog-top"><span class="wordmark">HIGHER RANK</span><button class="close-dialog" aria-label="Close contact">Close ×</button></div>
+    <div class="contact-inner"><span class="eyebrow"><i></i> SOMETHING STARTS HERE</span><h2 id="contact-title">What are you<br><em>imagining?</em></h2><p>A website. A gathering. An idea<br>that hasn't found its form yet.</p><a class="email" href="mailto:n.young@higherrankmedia.com?subject=Something%20starts%20here"><span class="email-label">n.young@higherrankmedia.com</span><span class="email-icon" aria-hidden="true"><svg class="diagonal" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M4 3h9v9"/></svg></span></a><button id="copy-email">Copy email address</button><span id="copy-status" role="status"></span></div>
+  </dialog>
+  <noscript><style>#studio-content{opacity:1;visibility:visible;position:absolute;top:350vh}#world{display:none}</style><p class="noscript-note">Explore the still edition. <a href="mailto:n.young@higherrankmedia.com">Contact Higher Rank</a>.</p></noscript>
+  <script type="module" src="/app.js"></script>
+</body></html>

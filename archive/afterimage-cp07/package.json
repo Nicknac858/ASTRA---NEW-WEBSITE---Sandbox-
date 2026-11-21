@@ -1,0 +1,8 @@
+{
+  "name": "higher-rank-afterimage",
+  "private": true,
+  "type": "module",
+  "scripts": {"build": "node build.mjs"},
+  "dependencies": {"three": "0.180.0", "@fontsource-variable/hanken-grotesk": "^5.2.0", "@fontsource-variable/bodoni-moda": "^5.2.0"},
+  "devDependencies": {"esbuild": "0.25.12"}
+}

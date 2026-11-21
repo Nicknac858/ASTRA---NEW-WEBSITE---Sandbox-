@@ -1,6 +1,6 @@
 # Astra — new website sandbox
 
-This is the working repository selected by Nick Young on November 21, 2026.
+This is the ongoing shared project repository selected by Nick Young on November 21, 2026. Nick has authorized routine development, fixes, branches, commits, pushes and checkpoints here without repeated permission requests. Repository work does not imply approval of a visual design.
 
 **Afterimage is archived and NOT APPROVED for Higher Rank.** It is retained for possible future reuse with another client. No replacement design is selected by this archive.
 
@@ -13,3 +13,4 @@ This is the working repository selected by Nick Young on November 21, 2026.
 The archive preserves the final source, illustration, locked font dependencies, build instructions, checks and limitations. It is a recovery snapshot, not the active Higher Rank website. Keep new work on a separate development branch.
 
 Original Higher Rank production, approved Nebula work and Claude’s alternate direction are outside this repository.
+
