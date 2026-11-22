@@ -539,6 +539,7 @@ class WovenCanvas {
   const names={ideas:'Ideas & experiments',inspiration:'Inspiration',index:'Index'};
   const text={ideas:'A hand lifts a length of sheer fabric. Move along the wire to see how the image slips behind the cyan fold.',
     inspiration:'A second fragment hangs deeper in the knot. As you descend, it turns into view across the fuchsia return.'};
+  if('scrollRestoration' in history)history.scrollRestoration='manual';
   const touchOnly=matchMedia('(pointer: coarse)').matches;
   const reduced=()=>pref.matches&&explicit!==true;
   const isPaused=()=>explicit===false||(explicit===null&&pref.matches);

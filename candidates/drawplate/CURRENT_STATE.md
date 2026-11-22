@@ -19,4 +19,4 @@ Open `slice/Night-Current.html` directly, or extract its byte-identical copy fro
 
 From `slice/`, `python build.py` builds the standalone file. A fresh checkout requires Python with NumPy, SciPy and Pillow with WebP support. `python bake.py` rebuilds the material atlases after changes to the authored guides. Both original study PNGs and the two licensed, self-hosted fonts are in the repository.
 
-The latest reviewed HTML has SHA-256 `5810d34a149bb795fd9a18833830fe9fb511178234388f7c4416523a04ffd5ff`. The runtime contains no external asset requests.
+The latest reviewed HTML has SHA-256 `03c0ec25e9c766d8861cdbca927187d5949e32a26007f1320a99e37ecb33fb4d`. The runtime contains no external asset requests.
