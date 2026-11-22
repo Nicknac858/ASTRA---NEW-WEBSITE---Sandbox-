@@ -1,6 +1,8 @@
 # Higher Rank · Night Current
 
-**Gate 1 revision · CP10 · November 21, 2026**
+**[Open the CP11 interactive review and motion film](slice/review/README.md)**
+
+Nick approved the Gate 1 artwork on November 21. The review below preserves the original direction and timing.
 
 The wires gather into a loose knot, leaving a dark opening through the middle. You can see fine lines of color through their clear skin. A hot pink pulse rounds the fold. Where the filaments touch, the charge splits. One branch throws sparks into the dark while the main cyan thread carries your eye down past the first image.
 

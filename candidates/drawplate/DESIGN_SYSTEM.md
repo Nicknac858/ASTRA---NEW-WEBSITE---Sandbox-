@@ -28,3 +28,7 @@ An initial pulse can play immediately while scroll and the index are already usa
 Hover or keyboard focus sends one short accent along the line serving a visible window and gives its edge a stable highlight. An outline and the label identify focus when motion is reduced. A single tap opens the reading panel. Pause ambient activity while reading, restore focus and exact scroll on close, and support direct links to each destination. Provide static viewpoints and the same linked content if real-time 3D cannot run.
 
 Gate 2 should use real curve geometry for distinct outer sheaths and their emissive cores. One curve-distance signal places the leading edge and wake. Emit sparks in world space from the authored contact. Resolve the visibility of the media and wires against scene depth. Judge highlights against a dark frame and verify that a rear pulse stays hidden behind a front surface. The offline timing sketch is review material.
+
+## CP11 implementation
+
+The approved wide and portrait material is registered to independent curved surfaces. A gentle turn and traveling deformation operate at rest. Scroll advances or reverses the camera across two independently moving opaque media planes. The runtime carries a colored tail behind each bright packet and keeps both depth crossings separate from the spark contact. Instrument Sans and Spectral are embedded under their included OFL licenses.

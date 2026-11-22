@@ -10,3 +10,16 @@
 | Reference and scope | Direct reference access limits and the historical walkthrough are recorded in [CP09](https://github.com/Nicknac858/ASTRA---NEW-WEBSITE---Sandbox-/blob/f8414623079619558944acf3ce40502289513053/candidates/drawplate/README.md). Preserve the spatial plan and content placeholders. |
 
 For Gate 2, record a forward and reverse descent, a paused frame and at least one verified occlusion at each camera angle. Exercise keyboard, touch where available, position restoration, reduced motion and the illustrated fallback. Record actual browser, GPU, display mode, CSS viewport, device pixel ratio, drawing-buffer resolution, active video count, median and 95th-percentile frame times. Separate device results from emulation. Nick decides whether to advance.
+
+## CP11 · Working preview
+
+| Check | Observation |
+| --- | --- |
+| Optical material | The two original images supply the surface textures. Each ribbon has a separate curved front and back, an authored depth profile, cylindrical inner filaments and a distance-based light pulse. Opaque image planes write depth. Concentrated glass highlights also participate in the depth pass. |
+| Contact and crossings | The side branch and return filament meet at the modeled spark emitter. Seven trails originate there. At the opening, the near cyan surface leads the pink descent by 183 scene units at their projected crossing. The upper bridge leads the incoming fold by 251. At the descended viewpoint those separations are 169 and 281 units respectively at the corresponding intersections. |
+| Real browser | Chrome 156 on Linux exercised the Canvas renderer. The 1152 × 648 CSS desktop viewport rendered to 1152 × 648 at DPR 1. A separate 390 × 844 CSS viewport rendered the portrait model at DPR 1 without horizontal overflow. Both used zero active videos. |
+| Interaction | Forward and reverse, both media planes, index selection, Back, keyboard Escape, restored focus and scroll position, reading pause, and manual pause/play were exercised. The two reading panels identify concept imagery. |
+| Motion evidence | The MP4 contains 168 distinct time samples, 1152 × 648 at 24 fps for 7.00 seconds. It samples the compatibility renderer through the camera move and back. The embedded WebP contains 105 frames. These files show the choreography independently of browser scheduling. |
+| Timing | The cloud desktop returned a median interval of 183 ms and a 95th percentile of 600 ms across 13 initial callbacks. This environment did not demonstrate smooth real-time playback. The compatibility path can reduce its drawing resolution when repeated paint calls take over 42 ms. |
+| Main shaders | The exact primary renderer’s geometry, uniforms, textures and ordered draw commands were replayed on Mesa 25.0.7 llvmpipe, OpenGL ES 3.2. Both GLSL stages compiled and linked and four viewpoints rendered with no GL error. [Primary material at the spark, software GLES](slice/review/Shader-material.jpg) |
+| Device limits | The review browser reported WebGL 2 unavailable. Physical GPU/browser performance, physical touch, OS-level reduced-motion activation, 4K television output and Galaxy S23 Ultra hardware remain open. `qa/browser.py` exercises the WebGL path in an equipped Chrome and includes a touch and reduced-motion case. |

@@ -8,3 +8,5 @@
 | 2026-11-21 | CP10 · Night Current | Nick requested more neon energy and found the hardware treatment too industrial. Revised the knot, wire material, moving light and contact sparks. Added an editable motion sketch and carried the HR alignment into the revised palette. |
 
 The [current checkpoint](CURRENT_STATE.md) pins the artwork and review revision and gives the next action.
+
+November 21, 2026 · CP11. Nick approved the Night Current artwork and reaffirmed ongoing sandbox development. Recovered the exact source imagery, built the reversible visual slice, and packaged the [working preview and film](slice/review/README.md) for owner review.

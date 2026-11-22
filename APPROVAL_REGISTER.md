@@ -8,6 +8,7 @@ Updated November 21, 2026.
 | Make Way | REJECTED | Do not revive by default. |
 | [Drawplate · CP09](https://github.com/Nicknac858/ASTRA---NEW-WEBSITE---Sandbox-/blob/f8414623079619558944acf3ce40502289513053/candidates/drawplate/README.md) | REVISION REQUESTED | Nick found the titanium and ceramic treatment too industrial. Retain this historical review. |
 | [Night Current · CP10](candidates/drawplate/README.md) | GATE 1 ARTWORK APPROVED | Nick approved the Night Current image and authorized the Gate 2 interactive slice. The working prototype will be reviewed separately. |
+| [Night Current · CP11 working preview](candidates/drawplate/slice/review/README.md) | READY FOR OWNER REVIEW | One reversible camera move, two suspended windows and the original wide and portrait material. Gate 2 approval is pending. |
 | Living Nebula V2 in the separate legacy repository | Outside this sandbox | Preserve existing approval/source; no changes made here. |
 
 Passing tests and archiving files do not constitute creative approval. No production promotion is authorized by this archive.

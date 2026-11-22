@@ -531,7 +531,7 @@ class WovenCanvas {
 (()=>{
   const byId=id=>document.getElementById(id),stage=byId('stage'),sheet=byId('sheet'),motion=byId('motion');
   const targets=[...document.querySelectorAll('.window-target')], light=byId('light'), lightContext=light.getContext('2d');
-  const state={time:0,p:0,active:-1,pointer:[0,0],target:[0,0],scene:null,frame:0,previous:null,width:0,height:0,running:false,quality:1,lastLabel:null};
+  const state={time:0,p:0,active:-1,pointer:[0,0],target:[0,0],scene:null,frame:0,previous:null,width:0,height:0,running:false,quality:1,lastLabel:null,slowFrames:0};
   const pref=matchMedia('(prefers-reduced-motion: reduce)'),query=new URLSearchParams(location.search);
   const review=query.has('review');
   let explicit=null,manual=false,initialized=false,modeToken=0,renderer,canvas=byId('scene'),returnFocus=null,priorScroll=0,dialogRoute=null;
@@ -616,7 +616,15 @@ class WovenCanvas {
     }
     state.previous=live?now:null;
     if(live){state.pointer=state.pointer.map((v,i)=>mix(v,state.target[i],.095));}
-    state.p=scrollUnits();render();
+    state.p=scrollUnits();
+    const paintStart=performance.now();render();
+    if(live&&renderer.kind==='Canvas 2D'&&!review){
+      const slow=performance.now()-paintStart>42;
+      state.slowFrames=slow?state.slowFrames+1:Math.max(0,state.slowFrames-2);
+      if(state.slowFrames>=10&&state.quality>.74){
+        state.quality=Math.max(.74,state.quality-.13);state.slowFrames=0;resize(true);
+      }
+    }
     if(live)schedule();
   }
   async function resize(force=false){
@@ -648,8 +656,8 @@ class WovenCanvas {
       for(const [key,label] of [['opening','Opening knot'],['ideas',names.ideas],['inspiration',names.inspiration]]){
         const b=document.createElement('button');b.type='button';b.textContent=label;
         b.addEventListener('click',()=>{
-          if(key==='opening'){closePanel();requestAnimationFrame(()=>scrollToProgress(0));return;}
-          const idx=key==='ideas'?0:1;returnFocus=targets[idx];priorScroll=(idx?.88:.34)*(document.documentElement.scrollHeight-innerHeight);
+          if(key==='opening'){priorScroll=0;returnFocus=byId('home');closePanel();return;}
+          const idx=key==='ideas'?0:1;returnFocus=targets[idx];priorScroll=(idx===1 ? .88 : .34)*(document.documentElement.scrollHeight-innerHeight);
           window.scrollTo({top:priorScroll,behavior:'instant'});state.p=scrollUnits();render();
           history.replaceState({nc:true},'', '#'+key);show(key);
         });links.append(b);
