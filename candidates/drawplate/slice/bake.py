@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw
 from scipy.interpolate import CubicHermiteSpline
-from scipy.ndimage import distance_transform_edt, gaussian_filter, map_coordinates
+from scipy.ndimage import distance_transform_edt, gaussian_filter1d, map_coordinates
 
 from shape import WIDE, PORTRAIT
 
@@ -108,6 +108,27 @@ def bake(name, spec, source):
             reflected = np.where(cols<left,left+np.mod(left-cols,length),np.where(cols>right,right-np.mod(cols-right,length),cols))
             color = np.where(out_of_frame[:,:,None],color[:,reflected,:],color)
             alpha = np.where(out_of_frame,alpha[:,reflected],alpha)
+        # Borrow a neighboring section of the same ribbon where another strand or panel obscured it in the painting.
+        own_sample = sample(ownership.astype('float32'),x,y)
+        panel_sample = sample(mask.astype('float32'),x,y)
+        central = np.abs(a[:,0])<.56
+        quality = np.median(own_sample[central],axis=0)*(1-np.mean(panel_sample[central],axis=0))
+        clean = quality>.76
+        if np.count_nonzero(clean)>18:
+            nearest = distance_transform_edt(~clean,return_distances=False,return_indices=True)[0]
+            neighbor_color = gaussian_filter1d(color[:,nearest,:],2,axis=1)
+            neighbor_alpha = gaussian_filter1d(alpha[:,nearest],2,axis=1)
+            missing = np.maximum((1-own_sample)**2*.65,panel_sample*.86)
+            donor = neighbor_alpha*missing
+            base_alpha = alpha
+            alpha = base_alpha+donor*(1-base_alpha)
+            color = (color*base_alpha[:,:,None]+neighbor_color*(donor*(1-base_alpha))[:,:,None])/np.maximum(alpha[:,:,None],.0001)
+        if guide['name'] in ('crown','incoming','back-edge','sliver','tap'):
+            taper=np.linspace(0,1,SAMPLES)
+            if guide['name'] in ('crown','incoming','back-edge','tap'):
+                alpha*=np.clip(taper/.041,0,1)[None,:]
+            if guide['name'] in ('crown','back-edge','sliver'):
+                alpha*=np.clip((1-taper)/.058,0,1)[None,:]
         row = np.concatenate([color,alpha[:,:,None]*255],axis=2)
         atlas[i*ROW+BORDER:(i+1)*ROW-BORDER] = np.clip(row,0,255).astype(np.uint8)
         metadata = {k:v for k,v in guide.items() if k!='points'}

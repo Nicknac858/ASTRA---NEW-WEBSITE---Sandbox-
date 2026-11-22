@@ -1,0 +1,31 @@
+name: Night Current browser proof
+on:
+  push:
+    branches: [astra/drawplate]
+    paths:
+      - candidates/drawplate/slice/Night-Current.html
+      - candidates/drawplate/slice/qa/browser.py
+      - .github/workflows/night-current-visual.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install playwright==1.56.0
+      - run: command -v ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y ffmpeg)
+      - run: python candidates/drawplate/slice/qa/browser.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Night-Current-browser-proof
+          path: |
+            evidence/*.mp4
+            evidence/*.gif
+            evidence/*.jpg
+            evidence/*.json

@@ -68,7 +68,8 @@
     const main=Math.exp(-.5*((phase-1.5)/.14)**2),hit=Math.exp(-.5*((phase-1.82)/.115)**2);
     const unit=view.sc;
     spot(ctx,center,unit*(23+16*main),[1,.28,.62],.15+.39*main);
-    spot(ctx,center,unit*(4+5*main),[1,.88,.95],.42+.42*main);
+    spot(ctx,center,unit*(5+5*main),[1,.88,.95],.72+.24*main);
+    spot(ctx,center,unit*2.8,[1,.97,1],.91);
     spot(ctx,tip,unit*(10+18*hit),[1,.33,.70],.09+.57*hit);
     spot(ctx,tip,unit*(2.5+4*hit),[.83,.95,1],.22+.77*hit);
     ctx.globalCompositeOperation='source-over';
@@ -97,7 +98,7 @@
       state.scene=s;renderer.useScene(s);
     }
     state.width=w;state.height=h;
-    const budget=renderer.kind==='WebGL 2'?4700000:1600000;
+    const budget=renderer.kind==='WebGL 2'?4700000:780000;
     const ratio=Math.min(devicePixelRatio||1,2,Math.sqrt(budget/(w*h)))*state.quality;
     for(const el of [canvas,light]){
       const r=el===light?Math.min(ratio,1.5):ratio;
