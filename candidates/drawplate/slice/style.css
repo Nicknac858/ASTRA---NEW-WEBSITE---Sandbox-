@@ -1,0 +1,39 @@
+@font-face{font-family:Instrument Sans;src:url("__SANS__") format("woff2");font-style:normal;font-weight:400 700;font-display:swap}
+@font-face{font-family:Spectral;src:url("__SERIF__") format("woff2");font-style:italic;font-weight:500;font-display:swap}
+:root{color-scheme:dark;background:#010309;color:#f2efed;font-family:"Instrument Sans",Arial,sans-serif;--pad:clamp(20px,3.8vw,80px);--inset:clamp(12px,2.4vh,32px)}
+*{box-sizing:border-box}
+html{scrollbar-width:none;overscroll-behavior-y:none}html::-webkit-scrollbar{display:none}body{margin:0}
+button,a{font:inherit;color:inherit}button{cursor:pointer;border:0;padding:0;background:transparent;-webkit-tap-highlight-color:transparent}
+button:focus-visible,a:focus-visible{outline:2px solid #78e3fd;outline-offset:5px}
+#journey{height:230vh;height:230svh}#stage{position:fixed;inset:0;overflow:hidden;background:#010309;isolation:isolate}
+.poster,.poster img,#scene,#light,#windows{position:absolute;inset:0;width:100%;height:100%}.poster img{object-fit:cover}#scene{opacity:0}#stage[data-ready] #scene{opacity:1}#stage[data-ready] .poster{visibility:hidden}
+#light,#windows{pointer-events:none}#windows{overflow:hidden}.top,.foot{position:absolute;left:0;right:0;padding-left:max(var(--pad),env(safe-area-inset-left));padding-right:max(var(--pad),env(safe-area-inset-right));pointer-events:none}
+.top{top:0;display:flex;align-items:center;justify-content:space-between;padding-top:max(var(--inset),env(safe-area-inset-top));text-shadow:0 1px 13px #000}
+.top button,.foot button{pointer-events:auto}.top nav,.sheet-head{display:flex;align-items:center;gap:21px}
+.wordmark,.sheet-head>span{font-size:.84rem;letter-spacing:.22em;font-weight:650}.wordmark,#index{min-height:44px;line-height:1}
+#index,#close{display:inline-flex;align-items:center;gap:10px;min-height:44px;font-size:.92rem;letter-spacing:.005em}
+.plus,.cross{position:relative;display:inline-block;width:11px;height:11px}.plus:after,.plus:before,.cross:after,.cross:before{content:"";position:absolute;background:currentColor;height:1px;width:11px;left:0;top:5px}.plus:after{transform:rotate(90deg)}.cross{transform:rotate(45deg)}.cross:after{transform:rotate(90deg)}
+#motion{display:flex;width:44px;height:44px;position:relative;align-items:center;justify-content:center;gap:3px}
+#motion:before{content:"";position:absolute;inset:5px;border:1px solid rgb(237 240 246/.32);border-radius:50%;transition:border-color .22s}
+#motion i{width:2px;height:10px;background:currentColor;border-radius:1px}#motion[data-paused] i:first-child{width:0;height:0;background:none;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:8px solid #eee;border-radius:0;transform:translateX(1px)}#motion[data-paused] i+ i{display:none}
+.foot{bottom:0;padding-bottom:max(calc(var(--inset) + 6px),env(safe-area-inset-bottom));display:flex;align-items:end;justify-content:space-between}
+h1,h2{font-family:Spectral,Georgia,serif;font-style:italic;font-weight:500;letter-spacing:-.056em}
+h1{font-size:clamp(2.5rem,3.65vw,4.75rem);line-height:1.02;margin:0 0 .23em -.035em;color:#f2ecea;text-shadow:0 2px 24px #010309}
+#follow{display:flex;min-height:44px;align-items:center;gap:12px;font-size:.9rem;color:#dedcdf;text-shadow:0 1px 7px #000}
+.wire-rule{width:29px;height:1px;background:linear-gradient(90deg,#ee7cc4 0%,#e7eafe 47%,#55c9e4 100%);transform-origin:left;transition:transform .32s}
+#follow:hover .wire-rule,#follow:focus-visible .wire-rule{transform:scaleX(1.23)}#motion:hover:before,#motion:focus-visible:before{border-color:#eef0f1}
+.travel{position:absolute;right:max(calc(var(--pad) + 8px),env(safe-area-inset-right));bottom:max(calc(var(--inset) + 22px),env(safe-area-inset-bottom));height:42px;width:1px;background:#edf4fa3b;pointer-events:none}
+.travel i{display:block;width:3px;height:9px;background:#dbebee;position:relative;left:-1px;top:calc(var(--progress,0) * 33px)}
+.window-target{display:block;position:absolute;pointer-events:auto;min-width:0;min-height:0;-webkit-tap-highlight-color:transparent}
+.window-target span{position:absolute;left:9%;bottom:13%;font-size:clamp(.8rem,1.2vw,1.05rem);text-shadow:0 1px 9px #000,0 0 4px #000;opacity:0;transition:opacity .2s,transform .28s;transform:translateY(4px)}
+.window-target:hover span,.window-target:focus-visible span{opacity:1;transform:none}.window-target:focus-visible{background:#67d8ef24;outline-offset:-2px}
+dialog{margin:auto var(--pad) auto auto;background:rgb(8 13 20/.98);color:#f4f0ed;border:1px solid #ffffff30;padding:0;width:min(460px,calc(100vw - 38px));max-height:calc(100dvh - 48px);box-shadow:0 26px 80px #0009}
+dialog::backdrop{background:#01040a66}dialog[open]{animation:settle .28s both}.sheet-head{justify-content:space-between;padding:14px 26px;border-bottom:1px solid #ffffff21}.sheet-head>span{font-size:.76rem}
+#sheet-body{padding:30px 28px 36px}h2{font-size:clamp(2rem,3.5vw,3rem);line-height:1.03;margin:0 0 20px}
+#sheet-body p{font-size:1rem;line-height:1.57;color:#d0d1d5;margin:.7em 0}.sheet-links{display:grid}.sheet-links button{border-top:1px solid #ffffff24;text-align:left;min-height:50px;font-size:1rem}
+figure{margin:0 0 20px}figure img{width:100%;display:block;max-height:195px;object-fit:cover}figcaption{font-size:.8125rem;color:#a9adb4;margin-top:8px}
+.nojs{position:fixed;left:var(--pad);bottom:22%;max-width:34ch;font-size:1rem;background:#02050de8;padding:15px}
+@keyframes settle{from{transform:translateY(8px);opacity:.15}to{transform:none;opacity:1}}
+@media(max-width:600px){.top nav{gap:10px}.wordmark{font-size:.79rem}.top{background:linear-gradient(#010309a8,transparent)}.foot{background:linear-gradient(transparent,#0103098a)}h1{font-size:2.55rem}.travel{height:30px}.travel i{top:calc(var(--progress,0) * 21px)}dialog{margin:auto auto max(20px,env(safe-area-inset-bottom))}#sheet-body{padding:25px}.window-target span{display:none}}
+@media(prefers-reduced-motion:reduce){*,*::after,*::before{animation:none!important;transition:none!important}}
+[data-motion="still"] *,[data-motion="still"] *:before{animation:none!important;transition:none!important}
