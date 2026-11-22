@@ -99,15 +99,20 @@ def bake(name, spec, source):
         alpha = sample((field*ownership).astype('float32'),x,y)*np.clip((1-abs(a))/.06,0,1)
         out_of_frame = (x<1)|(x>w-2)|(y<1)|(y>h-2)
         # Continue the actual material around the back of the fold beyond the reference crop.
-        inside = (p[:,0]>p[:,3]*.55)&(p[:,0]<w-p[:,3]*.55)&(p[:,1]>p[:,3]*.55)&(p[:,1]<h-p[:,3]*.55)
-        valid = np.flatnonzero(inside)
-        if len(valid)>30:
+        columns = np.arange(SAMPLES)
+        for lane in range(len(a)):
+            valid = np.flatnonzero(~out_of_frame[lane])
+            if len(valid)<8:
+                continue
             left,right = valid[0],valid[-1]
-            cols = np.arange(SAMPLES)
-            length = min(280,max(12,(right-left)//3))
-            reflected = np.where(cols<left,left+np.mod(left-cols,length),np.where(cols>right,right-np.mod(cols-right,length),cols))
-            color = np.where(out_of_frame[:,:,None],color[:,reflected,:],color)
-            alpha = np.where(out_of_frame,alpha[:,reflected],alpha)
+            reach = min(62,max(4,(right-left)//7))
+            # Mirror the actual last visible fibers continuously, including their per-lane exit positions.
+            distance = np.maximum(left-columns,columns-right).clip(min=0)
+            reflection = reach-np.abs(np.mod(distance,2*reach)-reach)
+            src = np.where(columns<left,left+reflection,np.where(columns>right,right-reflection,columns))
+            outside = out_of_frame[lane]
+            color[lane,outside] = color[lane,src[outside]]
+            alpha[lane,outside] = alpha[lane,src[outside]]
         # Borrow a neighboring section of the same ribbon where another strand or panel obscured it in the painting.
         own_sample = sample(ownership.astype('float32'),x,y)
         panel_sample = sample(mask.astype('float32'),x,y)
@@ -123,6 +128,21 @@ def bake(name, spec, source):
             base_alpha = alpha
             alpha = base_alpha+donor*(1-base_alpha)
             color = (color*base_alpha[:,:,None]+neighbor_color*(donor*(1-base_alpha))[:,:,None])/np.maximum(alpha[:,:,None],.0001)
+        # Reconstruct covered runs along each individual fiber when a media plane has moved away.
+        for lane in range(len(a)):
+            hole = (panel_sample[lane]>.04)&(~out_of_frame[lane])
+            if not hole.any():
+                continue
+            clean_cols = np.flatnonzero((panel_sample[lane]<.01)&(~out_of_frame[lane]))
+            if len(clean_cols)>5:
+                target = np.flatnonzero(hole)
+                weight = np.clip(panel_sample[lane,target]*1.15,0,1)
+                old = color[lane,target].copy()
+                for ch in range(3):
+                    inferred = np.interp(target,clean_cols,color[lane,clean_cols,ch])
+                    color[lane,target,ch] = old[:,ch]*(1-weight)+inferred*weight
+                inferred_alpha = np.interp(target,clean_cols,alpha[lane,clean_cols])
+                alpha[lane,target] = alpha[lane,target]*(1-weight)+inferred_alpha*weight
         if guide['name'] in ('crown','incoming','back-edge','sliver','tap'):
             taper=np.linspace(0,1,SAMPLES)
             if guide['name'] in ('crown','incoming','back-edge','tap'):

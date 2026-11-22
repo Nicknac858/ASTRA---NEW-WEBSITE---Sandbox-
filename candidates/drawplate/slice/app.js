@@ -37,7 +37,7 @@
     if(query.has('compat'))throw Error('Compatibility preview');
     renderer=new GlassRenderer(canvas);
     canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();useCompatibility();resize(true);});
-  }catch{useCompatibility();}
+  }catch(error){stage.dataset.graphicsNote=error.message;useCompatibility();}
   function schedule(){
     if(!state.frame&&!document.hidden&&!manual)state.frame=requestAnimationFrame(tick);
   }
@@ -82,7 +82,7 @@
     state.frame=0;
     const live=isPlaying();
     if(live&&state.previous!==null){
-      const ms=now-state.previous;state.time+=Math.min(ms,180)/1000;
+      const ms=now-state.previous;state.time+=Math.min(ms,1000)/1000;
       if(ms>0&&ms<850){frameTimes.push(ms);if(frameTimes.length>360)frameTimes.shift();}
     }
     state.previous=live?now:null;

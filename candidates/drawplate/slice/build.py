@@ -4,6 +4,9 @@ import json
 from pathlib import Path
 from sys import argv
 root=Path(__file__).resolve().parent
+if not (root/'textures/guides.json').exists():
+    import runpy
+    runpy.run_path(str(root/'bake.py'),run_name='__main__')
 out=Path(argv[1]).resolve() if len(argv)>1 else root/'Night-Current.html'
 def data(path, mime):
     return 'data:'+mime+';base64,'+base64.b64encode((root/path).read_bytes()).decode('ascii')
